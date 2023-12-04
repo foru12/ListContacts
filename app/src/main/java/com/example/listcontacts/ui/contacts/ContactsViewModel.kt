@@ -9,7 +9,7 @@ import com.example.listcontacts.data.model.DataContacts
 import com.example.listcontacts.data.repo.ContactsRepository
 import kotlinx.coroutines.launch
 
-class HomeViewModel(application: Application) : AndroidViewModel(application) {
+class ContactsViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: ContactsRepository
     val allContacts: LiveData<List<DataContacts>>

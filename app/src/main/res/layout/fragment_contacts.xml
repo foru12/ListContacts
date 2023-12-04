@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.contacts.HomeFragment">
+    tools:context=".ui.contacts.ContactsFragment">
 
 
 
@@ -13,6 +13,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rc_contacts"
         android:layout_width="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_contact"
         android:layout_height="match_parent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
