@@ -11,11 +11,11 @@ import com.example.listcontacts.R
 import com.example.listcontacts.data.model.DataContacts
 import com.example.listcontacts.databinding.ItemContactBinding
 
-class AdapterContacts (private val activity: Activity) : RecyclerView.Adapter<MyViewHolder>() {
+class AdapterContacts () : RecyclerView.Adapter<MyViewHolder>() {
 
     private var contactsList = mutableListOf<DataContacts>()
 
-    var clickListener: ListClickListener<DataContacts>? = null
+
     private var onItemClickListener: OnItemClickListener? = null
 
     @SuppressLint("NotifyDataSetChanged")
@@ -46,12 +46,12 @@ class AdapterContacts (private val activity: Activity) : RecyclerView.Adapter<My
             txtName.text = contacts.name
             txtNumber.text = contacts.number
 
-           /* Glide
+          /*  Glide
                 .with(activity)
                 .load(contacts.logoAvatar)
                 .centerCrop()
-                .into(imAvatarLogo);*/
-
+                .into(imAvatarLogo);
+*/
 
         }
         holder.itemView.setOnClickListener {
@@ -59,9 +59,7 @@ class AdapterContacts (private val activity: Activity) : RecyclerView.Adapter<My
         }
     }
 
-    fun setOnItemClick(listClickListener: ListClickListener<DataContacts>) {
-        this.clickListener = listClickListener
-    }
+
 
     interface OnItemClickListener {
         fun onContactsClick(contacts: DataContacts)
@@ -73,7 +71,3 @@ class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
 }
 
 
-interface ListClickListener<T> {
-    fun onClick(data: T, position: Int)
-    fun onDelete(contacts: T)
-}
