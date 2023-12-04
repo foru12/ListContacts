@@ -39,6 +39,17 @@
             android:text="@string/str_switch_phone_contacts" />
 
 
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start"
+            android:layout_margin="10dp"
+            android:textSize="24sp"
+            android:textAllCaps="true"/>
+
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
