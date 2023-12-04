@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ListContacts</string>
+    <string name="title_activity_contact">ContactAct</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="str_switch_random_contacts">Random Contacts</string>
+    <string name="str_switch_phone_contacts">Phone Contacts</string>
 </resources>
