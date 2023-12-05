@@ -22,6 +22,7 @@ class ContactsRepository(
         daoContacts.deleteContacts(dataContacts)
     }
 
+
     /*fun sortListContactsByName(dataContacts: DataContacts): LiveData<List<DataContacts>>{
         return daoContacts.sortListContactsByName(dataContacts)
     }*/

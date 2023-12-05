@@ -14,9 +14,8 @@ import com.example.listcontacts.ui.dialog.DialogBottom
 class ContactsFragment : Fragment() {
 
     private var _binding: FragmentContactsBinding? = null
-
-
     private val binding get() = _binding!!
+    private var flagClickDelete = true
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,6 +26,25 @@ class ContactsFragment : Fragment() {
             ViewModelProvider(this).get(ContactsViewModel::class.java)
         _binding = FragmentContactsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+
+
+
+        flagClickDelete = true
+
+        binding.btnChoice.setOnClickListener {
+            if (flagClickDelete) {
+                binding.checkboxSelectAll.visibility = View.VISIBLE
+                binding.btnAdd.visibility = View.GONE
+                binding.llContainerBtn.visibility = View.VISIBLE
+                flagClickDelete = false;
+            } else {
+                binding.checkboxSelectAll.visibility = View.GONE
+                binding.btnAdd.visibility = View.VISIBLE
+                binding.llContainerBtn.visibility = View.GONE
+                flagClickDelete = true;
+            }
+        }
 
         val adapter = AdapterContacts()
         binding.rcContacts.adapter = adapter
@@ -44,8 +62,11 @@ class ContactsFragment : Fragment() {
         }
 
 
-        adapter.setOncontactsClickListener(object :AdapterContacts.OnItemClickListener{
+        adapter.setOnContactsClickListener(object :AdapterContacts.OnItemClickListener{
             override fun onContactsClick(contacts: DataContacts) {
+                //contactsViewModel.delete(contacts)
+
+                Log.d("DATA",contacts.toString())
                 val dialog = DialogBottom(contacts)
                 dialog.show(requireActivity().supportFragmentManager,dialog.tag)
             }

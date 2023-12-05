@@ -19,4 +19,8 @@ class ContactsViewModel(application: Application) : AndroidViewModel(application
         repository = ContactsRepository(contactsDao)
         allContacts = repository.allContacts
     }
+
+    fun delete(dataContacts: DataContacts){
+        repository.deleteContacts(dataContacts)
+    }
 }

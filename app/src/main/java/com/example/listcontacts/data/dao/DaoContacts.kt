@@ -13,9 +13,10 @@ import com.example.listcontacts.data.model.DataContacts
 interface DaoContacts {
 
 
-    //Добавление объектов
+    //Добавление и обновление объектов
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertContacts(dataContacts: DataContacts)
+
 
     //Получение всего списка конактов
     @Query("Select * from contacts")

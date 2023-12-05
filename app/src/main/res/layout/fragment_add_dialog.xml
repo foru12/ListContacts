@@ -69,6 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
             android:layout_marginTop="20dp"
             android:background="@drawable/btn_bg"
             android:textAllCaps="true"

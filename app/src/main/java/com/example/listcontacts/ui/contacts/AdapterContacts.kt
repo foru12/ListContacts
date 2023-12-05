@@ -1,12 +1,10 @@
 package com.example.listcontacts.ui.contacts
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.listcontacts.R
 import com.example.listcontacts.data.model.DataContacts
 import com.example.listcontacts.databinding.ItemContactBinding
@@ -24,7 +22,7 @@ class AdapterContacts () : RecyclerView.Adapter<MyViewHolder>() {
         notifyDataSetChanged()
     }
 
-    fun setOncontactsClickListener(onItemClickListener: OnItemClickListener) {
+    fun setOnContactsClickListener(onItemClickListener: OnItemClickListener) {
         this.onItemClickListener = onItemClickListener
     }
 
@@ -45,6 +43,7 @@ class AdapterContacts () : RecyclerView.Adapter<MyViewHolder>() {
 
             txtName.text = contacts.name
             txtNumber.text = contacts.number
+            checkboxItem.visibility = View.GONE
 
           /*  Glide
                 .with(activity)

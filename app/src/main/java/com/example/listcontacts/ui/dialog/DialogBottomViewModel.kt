@@ -23,4 +23,6 @@ class DialogBottomViewModel (application: Application): AndroidViewModel(applica
         repository.insertContacts(dataContacts)
     }
 
+
+
 }
