@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="color_txt_number">#606060</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">ListContacts</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_switch_phone_contacts">Phone Contacts</string>
+    <string name="str_switch_random_contacts">Random Contacts</string>
+    <string name="title_activity_contact">ContactAct</string>
+    <string name="title_contacts">Contacts</string>
+    <string name="title_dashboard">Favourites</string>
+    <string name="title_notifications">Notifications</string>
+    <style name="Base.Theme.ListContacts" parent="Theme.Material3.DayNight.NoActionBar">
+        
+         <item name="colorPrimary">@color/black</item>
+    </style>
+    <style name="Theme.ListContacts" parent="Base.Theme.ListContacts"/>
+</resources>
