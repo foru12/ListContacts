@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.dialog.DialogBottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="20dp"
+            app:cardCornerRadius="10dp">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/img_anim"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:adjustViewBounds="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/animation_ll00q4si"
+                app:lottie_speed="1" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/ed_bg"
+            android:hint="name"
+            android:inputType="text"
+            android:maxLength="18"
+            android:padding="20dp" />
+
+
+        <EditText
+            android:id="@+id/ed_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/ed_bg"
+            android:digits="1234567890+"
+            android:hint="number"
+            android:inputType="number"
+            android:maxLength="18"
+            android:padding="20dp" />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_bg"
+            android:textAllCaps="true"
+            android:textSize="32sp"/>
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>
